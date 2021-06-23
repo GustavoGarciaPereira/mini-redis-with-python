@@ -12,3 +12,7 @@ criando um mini redis com python
 para todas essas pergunta eu não sei a resposta kkkkk
 
 ainda
+
+
+
+[material](https://charlesleifer.com/blog/building-a-simple-redis-server-with-python/)
