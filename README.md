@@ -23,6 +23,8 @@ para todas essas pergunta eu não sei a resposta kkkkk
 ainda
 
 
+estudando protocolos de compucação para trafegar dados pelas rede
+
 
 [material](https://charlesleifer.com/blog/building-a-simple-redis-server-with-python/)
 
