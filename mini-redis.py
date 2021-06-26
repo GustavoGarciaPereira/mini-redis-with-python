@@ -7,20 +7,60 @@ from io import BytesIO
 from socket import error as socket_error
 
 
-class CommandError(Exception): pass
+class CommandError(Exception):
+
+    pass
 
 
-class Disconnect(Exception): pass
+class Disconnect(Exception):
+
+    pass
 
 
 Error = namedtuple('Error', ('message',))
 
 
 class ProtocolHandler(object):
+    def __init__(self):
+        self.handlers = {
+            '+': self.handle_simple_string,
+            '-': self.handle_error,
+            ':': self.handle_integer,
+            '$': self.handle_string,
+            '*': self.handle_array,
+            '%': self.handle_dict}
+
     def handle_request(self, socket_file):
+        first_byte = socket_file.read(1)
+        if not first_byte:
+            raise Disconnect()
+
+        try:
+            return self.handlers[first_byte](socket_file)
+        except KeyError:
+            raise CommandError('bad request')
+
+    def handle_simple_string(self, socket_file):
         pass
 
+    def handle_error(self, socket_file):
+        pass
+
+    def handle_integer(self, socket_file):
+        pass
+
+    def handle_string(self, socket_file):
+        pass
+
+    def handle_array(self, socket_file):
+        pass
+
+    def handle_dict(self, socket_file):
+        pass
+
+
     def write_request(self, socket_file, data):
+
         pass
 
 
