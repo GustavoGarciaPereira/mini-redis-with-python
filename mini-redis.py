@@ -1,6 +1,6 @@
 from gevent import socket
 from gevent.pool import Pool
-from geven.server import StreamServer
+from gevent.server import StreamServer
 
 from collections import namedtuple
 from io import BytesIO
@@ -57,7 +57,6 @@ class ProtocolHandler(object):
 
     def handle_dict(self, socket_file):
         pass
-
 
     def write_request(self, socket_file, data):
 

@@ -30,3 +30,11 @@ estudando protocolos de compucação para trafegar dados pelas rede
 
 
 comencando a escrever o esqueleto do redis server
+
+
+## método das quatro causas
+
+- causa marerial "madeira"
+- causa formal "moldando as mardes"
+- causa eficiente "montando as partes"
+- causa final "o motivi pora serem montadas"
